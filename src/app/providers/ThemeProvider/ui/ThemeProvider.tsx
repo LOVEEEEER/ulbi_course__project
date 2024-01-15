@@ -1,9 +1,9 @@
-import { FC, useMemo, useState } from 'react';
+import { FC, useMemo, useState } from "react";
 import {
     ThemeContext,
     LOCAL_STORAGE_THEME_KEY,
     Theme,
-} from '../lib/ThemeContext';
+} from "../lib/ThemeContext";
 
 const defaulTheme = (localStorage.getItem(LOCAL_STORAGE_THEME_KEY) as Theme) || Theme.LIGHT;
 
