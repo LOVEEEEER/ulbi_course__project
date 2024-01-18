@@ -8,21 +8,24 @@ export function buildPlugins({
     paths,
     isDev,
 }: BuildOptions): webpack.WebpackPluginInstance[] {
-    return [
-        new HTMLWebpackPlugin({
-            template: paths.html,
-        }),
-        new webpack.ProgressPlugin(),
-        new MiniCssExtractPlugin({
-            filename: "css/[name].[contenthash:8].css",
-            chunkFilename: "chunks/[name].[contenthash:8].css",
-        }),
-        new webpack.DefinePlugin({
-            __IS_DEV__: JSON.stringify(isDev),
-        }),
-        new webpack.HotModuleReplacementPlugin(),
-        new BundleAnalyzerPlugin({
+    const plugins = [new HTMLWebpackPlugin({
+        template: paths.html,
+    }),
+    new webpack.ProgressPlugin(),
+    new MiniCssExtractPlugin({
+        filename: "css/[name].[contenthash:8].css",
+        chunkFilename: "chunks/[name].[contenthash:8].css",
+    }),
+    new webpack.DefinePlugin({
+        __IS_DEV__: JSON.stringify(isDev),
+    }), new webpack.HotModuleReplacementPlugin()];
+
+    if (isDev) {
+        plugins.push(new webpack.HotModuleReplacementPlugin());
+        plugins.push(new BundleAnalyzerPlugin({
             openAnalyzer: false,
-        }),
-    ];
+        }));
+    }
+
+    return plugins;
 }
