@@ -2,5 +2,7 @@
   "Язык": "Русский",
   "Страница не найдена": "Страница не найдена",
   "throw error": "throw error",
-  "Короткий язык": "Ru"
+  "Короткий язык": "Ru",
+  "increment": "increment",
+  "decrement": "decrement"
 }
