@@ -1,13 +1,18 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Counter } from "entities/Counter";
+import { Input } from "shared/ui/Input/Input";
 
 const MainPage:FC = () => {
     const { t } = useTranslation("main");
+    const [value, setValue] = useState("");
+
+    const handleChange = (val: string) => {
+        setValue(val);
+    };
+
     return (
         <div>
             {t("Главная страница")}
-            <Counter />
         </div>
     );
 };
