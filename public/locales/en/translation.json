@@ -5,7 +5,10 @@
   "Короткий язык": "En",
   "increment": "increment",
   "decrement": "decrement",
-  "Войти": "Войти",
-  "Введите username": "Введите username",
-  "Введите пароль": "Введите пароль"
+  "Войти": "Login",
+  "Введите username": "Enter username",
+  "Введите пароль": "Enter password",
+  "Форма авторизации": "Authorization form",
+  "Вы ввели неверный логин или пароль": "Uncorrect username or password",
+  "Выйти": "Logout"
 }
