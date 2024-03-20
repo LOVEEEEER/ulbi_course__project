@@ -15,7 +15,7 @@ enum LoginErrors {
 
 export const loginByUsername = createAsyncThunk<User, LoginByUsernameProps, {rejectValue: string}>(
     "login/loginByUsername",
-    async (authData: LoginByUsernameProps, thunkAPI) => {
+    async (authData, thunkAPI) => {
         try {
             const { data } = await axios.post<User>("http://localhost:8000/login", authData);
 
