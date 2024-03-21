@@ -27,6 +27,7 @@ const initialReducers: ReducersList = {
     loginForm: loginReducer,
 };
 
+// eslint-disable-next-line react/prop-types
 const LoginForm: FC<LoginFormProps> = memo(({ className }) => {
     const { t } = useTranslation();
     const dispatch = useDispatch();
