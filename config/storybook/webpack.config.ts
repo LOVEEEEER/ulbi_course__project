@@ -4,7 +4,7 @@ import { BuildPaths } from "../build/types/config";
 import { buildCssLoader } from "../build/loaders/buildCssLoader";
 import { buildSvgLoader } from "../build/loaders/buildSvgLoader";
 
-export default ({ config }: {config: webpack.Configuration}) => {
+export default ({ config }: { config: webpack.Configuration }) => {
     const paths: BuildPaths = {
         build: "",
         html: "",
@@ -30,6 +30,7 @@ export default ({ config }: {config: webpack.Configuration}) => {
 
     config.plugins?.push(new webpack.DefinePlugin({
         __IS_DEV__: JSON.stringify(true),
+        __API__: JSON.stringify(""),
     }));
 
     return config;

@@ -25,7 +25,7 @@ export const Input: FC<InputProps> = memo((props) => {
     useEffect(() => {
         if (autofoсus) {
             setIsFocused(true);
-            inputRef.current.focus();
+            inputRef.current?.focus();
         }
     }, [autofoсus]);
 

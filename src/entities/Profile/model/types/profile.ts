@@ -9,7 +9,7 @@ export interface ProfileType {
   city: string,
   username: string,
   avatar: string,
-};
+}
 
 export interface ProfileSchema {
   data?: ProfileType,

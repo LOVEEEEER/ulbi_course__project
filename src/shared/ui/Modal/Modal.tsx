@@ -1,8 +1,7 @@
 import {
-    FC, MouseEvent, PropsWithChildren, useCallback, useEffect, useRef, useState,
+    FC, MouseEvent, MutableRefObject, PropsWithChildren, useCallback, useEffect, useRef, useState,
 } from "react";
-import { classNames } from "shared/lib/classNames/classNames";
-import { useTheme } from "app/providers/ThemeProvider";
+import { Mods, classNames } from "shared/lib/classNames/classNames";
 import cls from "./Modal.module.scss";
 import { Portal } from "../Portal/Portal";
 
@@ -18,8 +17,7 @@ const ANIMATION_DELAY = 300;
 export const Modal: FC<PropsWithChildren<ModalProps>> = (props) => {
     const [isClosing, setIsClosing] = useState(false);
     const [isMounted, setIsMounted] = useState(false);
-    const timerRef = useRef<ReturnType<typeof setTimeout>>();
-    const { theme } = useTheme();
+    const timerRef = useRef() as MutableRefObject<ReturnType<typeof setTimeout>>;
 
     const {
         className, children, isOpen, onClose, lazy,
@@ -31,7 +29,7 @@ export const Modal: FC<PropsWithChildren<ModalProps>> = (props) => {
         }
     }, [isOpen]);
 
-    const mods: Record<string, boolean> = {
+    const mods: Mods = {
         [cls.opened]: isOpen,
         [cls.isClosing]: isClosing,
     };

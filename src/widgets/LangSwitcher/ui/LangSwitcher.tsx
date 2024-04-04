@@ -8,7 +8,7 @@ interface LangSwitcherProps {
   short?: boolean;
 }
 
-export const LangSwitcher: FC<LangSwitcherProps> = memo(({ className, short }) => {
+export const LangSwitcher = memo(({ className, short }: LangSwitcherProps) => {
     const { t, i18n } = useTranslation();
 
     const handleChangeLanguage = () => {
