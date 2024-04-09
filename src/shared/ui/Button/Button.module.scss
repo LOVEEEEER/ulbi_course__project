@@ -22,6 +22,12 @@
     background-color: transparent;
 }
 
+.outlineRed {
+    color: var(--red-light);
+    border: 1px solid var(--red-light);
+    background-color: transparent;
+}
+
 .background {
     background: var(--bg-color);
     color: var(--primary-color);

@@ -27,12 +27,12 @@
   ],
   "profile": {
     "first": "Никита",
-    "lastName": "Демьяненко",
-    "age": 18,
-    "currency": "RUB",
-    "country": "Russia",
-    "city": "Moscow",
+    "lastName": "Демьяненко123",
+    "age": 19,
+    "currency": "EUR",
+    "country": "Kazakhstan",
+    "city": "Khabarovsk",
     "username": "admin",
-    "avatar": "123"
+    "avatar": "https://cdn.vectorstock.com/i/500p/98/87/hacker-logo-vector-22539887.jpg"
   }
 }
