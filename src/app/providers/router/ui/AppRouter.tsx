@@ -13,7 +13,9 @@ function AppRouter() {
             if (route.authOnly && !isAuth) return false;
             return true
         })
-    }, [])
+    }, [isAuth])
+
+    console.log(routes, isAuth)
 
     const elements = useRoutes(routes);
     return (
