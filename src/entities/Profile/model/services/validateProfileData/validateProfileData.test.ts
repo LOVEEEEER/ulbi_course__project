@@ -35,9 +35,9 @@ describe("validateProfileData", () => {
   test("incorrect all", () => {
     const result = validateProfileData({});
     expect(result).toEqual([
+      ValidateProfileError.INCORRECT_USER_DATA,
       ValidateProfileError.INCORRECT_AGE,
       ValidateProfileError.INCORRECT_COUNTRY,
-      ValidateProfileError.INCORRECT_USER_DATA,
     ]);
   })
 })

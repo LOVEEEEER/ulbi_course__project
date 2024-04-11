@@ -42,7 +42,7 @@ const profileSlice = createSlice({
             state.error = action.payload;
         });
         builder.addCase(updateProfileData.pending, (state) => {
-            state.error = undefined;
+            state.validateErrors = undefined;
             state.isLoading = true;
         });
         builder.addCase(updateProfileData.fulfilled, (state, action) => {
